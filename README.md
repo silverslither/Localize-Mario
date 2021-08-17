@@ -39,3 +39,6 @@ If the number of images is not an even multiple of 4, GIMP might throw an error 
 What you should now have is a folder containing the images, and a text file. 
 You can combine multiple movies using the Increment File Name PowerShell script, and by incrementing the first number at the start of every line in the text file and combining two text files (idk how to do that yet, search it up yourself).
 For the PowerShell script, change ```INC``` to the length of the previous movie(s).
+
+Note that the output images all have .png extensions, however the majority are actually encoded with JPEG. It shouldn't matter too much, however it is important to know. 
+You can verify whether an image is a PNG or a JPEG by checking to see if it is a Very High Quality image, or using a hex editor.
