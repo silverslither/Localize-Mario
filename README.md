@@ -1,6 +1,6 @@
 # Localize-Mario
 Repo containing scripts and code used to generate artificial training info for localizing Mario.
-This is used to aid FidibyDibity's project in which he aims to combine the entire speedrun.com/smb1 leaderboard into one video.
+This is used to aid FibidyDibity's project in which he aims to combine the entire https://www.speedrun.com/smb1/ leaderboard into one video.
 # Usage (For Windows)
 Using FCEUX, obtain a movie file of a speedrun of NES Super Mario Bros., and dump an avi file.
 When doing so, make sure to run ```localize.lua``` to save localization info.
