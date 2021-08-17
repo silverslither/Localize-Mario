@@ -1,0 +1,46 @@
+--------------------FFmpeg Commands--------------------
+
+----------For One AVI----------
+ffmpeg -i input.avi "DIR/%05d.png"
+
+----------For Multiple AVI Files----------
+ffmpeg -f concat -safe 0 -i input.txt "DIR/%05d.png"
+
+--------------------Remove Leading Zeros--------------------
+
+Get-ChildItem . -File -Filter "0????.png" |
+ForEach-Object {
+	Rename-Item $_.FullName $($_.Name -replace '0+(?=\d\d\d\d)', '')
+}
+
+----------then----------
+
+Get-ChildItem . -File -Filter "0???.png" |
+ForEach-Object {
+	Rename-Item $_.FullName $($_.Name -replace '0+(?=\d\d\d)', '')
+}
+
+----------then----------
+
+Get-ChildItem . -File -Filter "0??.png" |
+ForEach-Object {
+	Rename-Item $_.FullName $($_.Name -replace '0+(?=\d\d)', '')
+}
+
+----------then----------
+
+Get-ChildItem . -File -Filter "0?.png" |
+ForEach-Object {
+	Rename-Item $_.FullName $($_.Name -replace '0+(?=\d)', '')
+}
+
+--------------------Increment File Name--------------------
+
+$Increment = INC
+Get-ChildItem | Where Name -match '^(\d+)(.+)$' |
+    Select FullName,
+        @{ N = 'Index'    ; E = { [Int]$Matches[1] }},
+        @{ N = 'NameText' ; E = { $Matches[2] }} |
+Sort Index -Descending | ForEach{    
+    Rename-Item $_.FullName -NewName ( '{0:d2}{1}' -f ( $_.Index + $Increment ), $_.NameText )
+}
