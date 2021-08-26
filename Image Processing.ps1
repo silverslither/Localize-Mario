@@ -1,13 +1,13 @@
-for($x = 0; $x -le 18999; $x += 4) {
+for($x = 0; $x -le NUM; $x += 4) {
 	Copy-Item "$x.png" -Destination "output\$x.png"
 }
 
-for($x = 1; $x -le 18999; $x += 4) {
+for($x = 1; $x -le NUM; $x += 4) {
 	$RAND1 = ((1 .. 11 | Get-Random) - 6)
 	magick "$x.png" -filter Cubic -resize 512x480! -resize 256x240! -brightness-contrast $RAND1 -quality 70 "output\$x.jpeg"
 }
 
-for($x = 2; $x -le 18999; $x += 4) {
+for($x = 2; $x -le NUM; $x += 4) {
 	$RAND0 = (5 .. 10 | Get-Random)
 	$RAND1 = (384 .. 640 | Get-Random)
 	$RAND2 = ((-1, 1 | Get-Random)*(5 .. 10 | Get-Random))
@@ -20,7 +20,7 @@ for($x = 2; $x -le 18999; $x += 4) {
 	Remove-Item "temp\$x.png"
 }
 
-for($x = 3; $x -le 18999; $x += 4) {
+for($x = 3; $x -le NUM; $x += 4) {
 	$RAND0 = (10 .. 20 | Get-Random)
 	$RAND1 = (240 .. 256 | Get-Random)
 	$RAND2 = (224 .. 240 | Get-Random)
