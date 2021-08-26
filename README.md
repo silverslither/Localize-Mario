@@ -3,9 +3,13 @@ Repo containing scripts and code used to generate artificial training info for l
 This is used to aid FibidyDibity's project in which he aims to combine the entire https://www.speedrun.com/smb1/ leaderboard into one video.
 # Prerequisites
 Windows 7 or above (preferably Windows 10)
-Windows PowerShell
-FFmpeg
-ImageMagick
+
+Windows PowerShell: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1
+
+FFmpeg: https://www.wikihow.com/Install-FFmpeg-on-Windows
+
+ImageMagick: https://imagemagick.org/script/download.php
+
 # Usage (For Windows)
 Using FCEUX, obtain a movie file of a speedrun of NES Super Mario Bros. (with a 5-digit framecount!), and dump an avi file.
 Also run both ```localize.lua``` and ```camera.lua``` to save localization info.
