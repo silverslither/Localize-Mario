@@ -1,5 +1,5 @@
 marioBool = false
-file = io.open("NAME.txt", "a")
+file = io.open("MARIO-LOCALIZED.txt", "a")
 
 function updateMario()
 	marioBool = false
