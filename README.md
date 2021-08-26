@@ -4,7 +4,7 @@ This is used to aid FibidyDibity's project in which he aims to combine the entir
 # Prerequisites
 Windows 7 or above (preferably Windows 10)
 
-Windows PowerShell: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1
+Windows PowerShell: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell
 
 FFmpeg: https://www.wikihow.com/Install-FFmpeg-on-Windows
 
