@@ -1,5 +1,5 @@
 # Localize-Mario
-Repo containing scripts and code used to generate artificial training info for localizing Mario.
+Repo containing scripts and code used to generate artificial training info for localizing Mario, as well as the camera position.
 This is used to aid FibidyDibity's project in which he aims to combine the entire https://www.speedrun.com/smb1/ leaderboard into one video.
 # Prerequisites
 Windows 7 or above (preferably Windows 10)
@@ -8,9 +8,9 @@ FFmpeg
 ImageMagick (or GIMP)
 # Usage (For Windows)
 Using FCEUX, obtain a movie file of a speedrun of NES Super Mario Bros., and dump an avi file.
-When doing so, make sure to run ```localize.lua``` to save localization info.
-This will not work if you have placed ```localize.lua``` in a protected folder, such as a subdirectory of ```C:\Program Files\```.
-After doing so, remove the first line of the text file, as that is a redundant frame 0 and rename the text file for organization.
+When doing so, make sure to run ```localize.lua``` and ```camera.lua``` to save localization info.
+This will not work if you have placed ```localize.lua``` or ```camera.lua``` in a protected folder, such as a subdirectory of ```C:\Program Files\```.
+After doing so, remove the first line of the ```localize.lua``` output, as that is a redundant frame 0, remove the frames up to the first frame of 1-1 in the ```camera.lua``` output, and rename the text files for organization.
 I have discovered an issue in which the lagframe following the ```Start``` press on the title screen where Mario disappears still registers Mario as onscreen, and that would have to be manually corrected.
 
 Afterwards, open a PowerShell window in the directory containing the files and run the ffmpeg command corresponding to your output (you can find the commands in ```powershell-scripts.txt```.
