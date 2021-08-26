@@ -38,6 +38,8 @@ Now that you have the image files, you can remove the dumped AVI files.
 
 To process the images, create two folders inside the folder containing the images named ```output``` and ```temp```, and run ```Image Processing.ps1```, replacing ```NUM``` at the start of each script with the largest image index. In the end, you should have the same amount of images in ```output``` as outside it.
 
+Note: PowerShell might throw an error every once in a while, unless it's an ImageMagick error everything should be fine.
+
 You may move ```output``` as well as the localization info to a safe location, and delete the folder originally containing it (make sure nothing important is there!)
 
 What you should now have is a folder containing the images, and two text files. 
