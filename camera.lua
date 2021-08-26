@@ -1,4 +1,4 @@
-file = io.open("NAME.txt", "a")
+file = io.open("CAMERA-LOCALIZED.txt", "a")
 
 while (true) do
 	if (taseditor.engaged() and memory.readbyte(14) ~= 0) then
