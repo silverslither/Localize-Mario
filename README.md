@@ -20,13 +20,13 @@ I have discovered an issue in which the lagframe following the ```Start``` press
 Afterwards, open a PowerShell window in the directory containing the files and run the ffmpeg command corresponding to your output (you can find the commands in ```FFmpeg Commands.ps1```.
 For small movies that output just one AVI file, run the first ffmpeg command. For large movies with more than one AVI file, create a text file named ```input.txt``` in the same dir, with the following contents:
 ```
-file [Drive]:\path\to\file\input.avi
-file [Drive]:\path\to\file\input_part2.avi
+file '[Drive]:\path\to\file\input.avi'
+file '[Drive]:\path\to\file\input_part2.avi'
 .
 .
 .
 ```
-Make sure it is encoded in UTF-8 (or ASCII, haven't tested that tho) and run the second ffmpeg command.
+Make sure it is encoded in UTF-8 and run the second ffmpeg command.
 You can change ```DIR``` to anything you want for organization.
 
 You may notice that the first frame is named ```1.png```, not ```0.png```. Simply copy a black frame and rename it to ```0.png```.
